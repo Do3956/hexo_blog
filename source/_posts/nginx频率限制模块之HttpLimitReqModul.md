@@ -1,19 +1,22 @@
 ---
-title: 频率限制-HttpLimitReqModul
+title: nginx频率限制模块之HttpLimitReqModul
 date: 2018-11-30 12:26:41
+
 tags:
 - nginx
-- 安全
+- 网络安全
+
 categories:
 - nginx
 
 ---
 
 HttpLimitReqModul为nginx官方自带的**限制单位时间内请求次数**的功能模块，通过**limit_req_zone**和**limit_req**指令配合使用来达到限制。一旦对应的累计连接超过指定数量，就会返回503错误。
+可以利用该规则对IP和URL进行访问频率的限制。
 
 >- limit_conn_zone 定义IP或url访问的频率限制规则
 只能配置在 http{} 
-- limit_conn 启用对应的规则
+>- limit_conn 启用对应的规则
 可以配置于http{}，server{}，location{} 
 
 #### 限制规则
@@ -58,7 +61,9 @@ burst 代表令牌数量，至少要为1，即可以在limit_req_zone规则的�
 #### 频率单位
 只能控制 秒（rate=100r/s） 和 分钟（rate=100r/m） 级别
 
-#### 多个限制时，只要有一个符合条件，就会触发限制
+#### 案例分析
+
+多个限制时，只要有一个符合条件，就会触发限制
 
 ```
 http {

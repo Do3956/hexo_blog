@@ -4,8 +4,8 @@
 
 # Site
 title: 李庭嘉的博客
-subtitle: 这个是哪里
-description: 呦嚯嚯嚯～
+subtitle: 工具谁都能用，掌握原理才是高手
+description: 思考、总结
 keywords:
 author: Do Lee
 language: zh-Hans
@@ -82,4 +82,7 @@ deploy:
   repo: https://github.com/Do3956/do3956.github.io.git
   branch: master
 
-
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
