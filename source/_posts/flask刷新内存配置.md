@@ -8,6 +8,7 @@ tags:
 - flask
 
 categories:
+- 微服务
 - 服务发现
 
 ---
